@@ -1,0 +1,43 @@
+### Home Route
+GET http://localhost:5002/
+
+
+### Create Note
+POST http://localhost:5002/api/notes
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YWEzZmNmMzE3ZWFiNDI3NjAxNWJhYjgiLCJpYXQiOjE3ODkxNDE1NDUsImV4cCI6MTc4OTIyNzk0NX0.dVuScQx-xUNUmsxbjUhcRkWdbCmUOeoZxIwNUoWp9vQ
+
+{
+  "title": "Internship Work",
+  "content": "Complete the Notes App Backend assignment."
+}
+
+
+### Get All Notes
+GET http://localhost:5002/api/notes
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YWEzZmNmMzE3ZWFiNDI3NjAxNWJhYjgiLCJpYXQiOjE3ODkxNDE1NDUsImV4cCI6MTc4OTIyNzk0NX0.dVuScQx-xUNUmsxbjUhcRkWdbCmUOeoZxIwNUoWp9vQ
+
+
+### Get One Note
+GET http://localhost:5002/api/notes/6aa4228cf8b9c4a24c1dabbb
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YWEzZmNmMzE3ZWFiNDI3NjAxNWJhYjgiLCJpYXQiOjE3ODkxNDE1NDUsImV4cCI6MTc4OTIyNzk0NX0.dVuScQx-xUNUmsxbjUhcRkWdbCmUOeoZxIwNUoWp9vQ
+
+
+### Update Note
+PUT http://localhost:5002/api/notes/6aa4228cf8b9c4a24c1dabbb
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YWEzZmNmMzE3ZWFiNDI3NjAxNWJhYjgiLCJpYXQiOjE3ODkxNDE1NDUsImV4cCI6MTc4OTIyNzk0NX0.dVuScQx-xUNUmsxbjUhcRkWdbCmUOeoZxIwNUoWp9vQ
+
+{
+  "title": "Updated Internship Work",
+  "content": "Complete and test all Week 2 assignments."
+}
+
+
+### Delete Note
+DELETE http://localhost:5002/api/notes/6aa4228cf8b9c4a24c1dabbb
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YWEzZmNmMzE3ZWFiNDI3NjAxNWJhYjgiLCJpYXQiOjE3ODkxNDE1NDUsImV4cCI6MTc4OTIyNzk0NX0.dVuScQx-xUNUmsxbjUhcRkWdbCmUOeoZxIwNUoWp9vQ
+
+
+### Test Protected Route Without Token
+GET http://localhost:5002/api/notes

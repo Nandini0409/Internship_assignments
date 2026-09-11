@@ -1,0 +1,35 @@
+### Create a new task
+POST http://localhost:5000/api/tasks
+Content-Type: application/json
+
+{
+  "title": "Complete project report",
+  "description": "Finish and submit report before 15 sep"
+}
+
+###
+
+### Get all tasks
+GET http://localhost:5000/api/tasks
+
+###
+
+### Get one task
+GET http://localhost:5000/api/tasks/6aa3f5ec8c81bff0317bd828
+
+###
+
+### Update a task
+PUT http://localhost:5000/api/tasks/6aa3f5ec8c81bff0317bd828
+Content-Type: application/json
+
+{
+  "title": "Complete Week 2 assignment",
+  "description": "Finish the To-Do API and test all endpoints",
+  "completed": true
+}
+
+###
+
+### Delete a task
+DELETE http://localhost:5000/api/tasks/6aa3f5ec8c81bff0317bd828

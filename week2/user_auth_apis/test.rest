@@ -1,0 +1,25 @@
+### Register User
+POST http://localhost:5001/api/auth/register
+Content-Type: application/json
+
+{
+  "name": "Nandini",
+  "email": "nandiniexample.com",
+  "password": "Password123"
+}
+
+
+
+### Login User
+POST http://localhost:5001/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "nandini@example.com",
+  "password": "Password123"
+}
+
+
+### Protected Profile
+GET http://localhost:5001/api/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YWEzZmNmMzE3ZWFiNDI3NjAxNWJhYjgiLCJpYXQiOjE3ODkxMzIzMzksImV4cCI6MTc4OTIxODczOX0.Qug7DBmx4vN248ArmLO2peMurxAwW63PP4hdkv3Y7SU
