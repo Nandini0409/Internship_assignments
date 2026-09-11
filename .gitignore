@@ -1,0 +1,21 @@
+node_modules/
+
+# React/Vite build output
+dist/
+build/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor/system files
+.vscode/
+.DS_Store
+Thumbs.db
