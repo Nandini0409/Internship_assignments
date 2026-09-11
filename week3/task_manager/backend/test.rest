@@ -1,0 +1,85 @@
+### Register User
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "name": "Nandini",
+  "email": "nandini@example.com",
+  "password": "Password123"
+}
+
+
+### Login User
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "nandini@example.com",
+  "password": "Password123"
+}
+
+
+
+### Create Task
+POST http://localhost:5000/api/tasks
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YWEzZmNmMzE3ZWFiNDI3NjAxNWJhYjgiLCJpYXQiOjE3ODkxNDQ0ODIsImV4cCI6MTc4OTIzMDg4Mn0.kwI0xsKYD88c2uRxtq2iOvrNbqH1qbPnFtEDCu5zOpk
+
+{
+  "title": "Complete Week 3 assignment",
+  "description": "Connect the backend with the React frontend",
+  "completed": false
+}
+
+
+### Get All Tasks
+GET http://localhost:5000/api/tasks
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YWEzZmNmMzE3ZWFiNDI3NjAxNWJhYjgiLCJpYXQiOjE3ODkxNDQ0ODIsImV4cCI6MTc4OTIzMDg4Mn0.kwI0xsKYD88c2uRxtq2iOvrNbqH1qbPnFtEDCu5zOpk
+
+
+### Get Pending Tasks
+GET http://localhost:5000/api/tasks?status=pending
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YWEzZmNmMzE3ZWFiNDI3NjAxNWJhYjgiLCJpYXQiOjE3ODkxNDQ0ODIsImV4cCI6MTc4OTIzMDg4Mn0.kwI0xsKYD88c2uRxtq2iOvrNbqH1qbPnFtEDCu5zOpk
+
+
+### Get Completed Tasks
+GET http://localhost:5000/api/tasks?status=completed
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YWEzZmNmMzE3ZWFiNDI3NjAxNWJhYjgiLCJpYXQiOjE3ODkxNDQ0ODIsImV4cCI6MTc4OTIzMDg4Mn0.kwI0xsKYD88c2uRxtq2iOvrNbqH1qbPnFtEDCu5zOpk
+
+
+### Get One Task
+GET http://localhost:5000/api/tasks/6aa42dc4b805ad6be6e6acf0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YWEzZmNmMzE3ZWFiNDI3NjAxNWJhYjgiLCJpYXQiOjE3ODkxNDQ0ODIsImV4cCI6MTc4OTIzMDg4Mn0.kwI0xsKYD88c2uRxtq2iOvrNbqH1qbPnFtEDCu5zOpk
+
+
+
+### Update Task
+PUT http://localhost:5000/api/tasks/6aa42dc4b805ad6be6e6acf0
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YWEzZmNmMzE3ZWFiNDI3NjAxNWJhYjgiLCJpYXQiOjE3ODkxNDQ0ODIsImV4cCI6MTc4OTIzMDg4Mn0.kwI0xsKYD88c2uRxtq2iOvrNbqH1qbPnFtEDCu5zOpk
+
+{
+  "title": "Complete Week 3 assignment",
+  "description": "Backend connected and tested",
+  "completed": true
+}
+
+
+
+### Delete Task
+DELETE http://localhost:5000/api/tasks/6aa42dc4b805ad6be6e6acf0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YWEzZmNmMzE3ZWFiNDI3NjAxNWJhYjgiLCJpYXQiOjE3ODkxNDQ0ODIsImV4cCI6MTc4OTIzMDg4Mn0.kwI0xsKYD88c2uRxtq2iOvrNbqH1qbPnFtEDCu5zOpk
+
+
+
+### Upload Image
+POST http://localhost:5000/api/upload
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YWEzZmNmMzE3ZWFiNDI3NjAxNWJhYjgiLCJpYXQiOjE3ODkxNDQ0ODIsImV4cCI6MTc4OTIzMDg4Mn0.kwI0xsKYD88c2uRxtq2iOvrNbqH1qbPnFtEDCu5zOpk
+Content-Type: multipart/form-data; boundary=MyBoundary
+
+--MyBoundary
+Content-Disposition: form-data; name="image"; filename="sample.jpg"
+Content-Type: image/jpeg
+
+< ./sample.jpg
+--MyBoundary--
